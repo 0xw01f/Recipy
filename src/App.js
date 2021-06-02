@@ -51,7 +51,7 @@ const App = () => {
         <Recipe
           key={recipe.recipe.label}
           title={recipe.recipe.label}
-          calories={recipe.recipe.calories}
+          calories={Math.round((recipe.recipe.calories + Number.EPSILON) * 100) / 100}
           image={recipe.recipe.image} 
           ingredients={recipe.recipe.ingredients}
         />
